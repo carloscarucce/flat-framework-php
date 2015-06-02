@@ -1,0 +1,118 @@
+<?php
+    /* @var $this \controller\Welcome */
+?>
+
+<div class="container">
+    <h1>Welcome to Flat!</h1>
+    
+    <p>
+        Thanks for choosing Flat as your php framework.
+        Here are some important things you'd like to know before you start using it.
+    </p><br/>
+    
+    <h3>First steps:</h3>
+    
+    <p>
+        <span class="glyphicon glyphicon glyphicon-chevron-right"></span>
+        Take a look at "config" folder.
+        There will be 5 ini files:
+    </p>
+    <ul>
+        <li>
+            <strong>crypt.ini</strong><br/>
+            <span class="help-block">
+                Encryption key goes here
+            </span>
+        </li>
+        <li>
+            <strong>date.ini</strong><br/>
+            <span class="help-block">
+                Date formatting
+            </span>
+        </li>
+        <li>
+            <strong>db.ini</strong><br/>
+            <span class="help-block">
+                Database connection strings (I recommend you to use last version of MySQL, other databases won't be officially supported in this version)
+            </span>
+        </li>
+        <li>
+            <strong>flat.ini</strong><br/>
+            <span class="help-block">
+                Flat's directives such as starting controller, sessions, default database connection, etc.
+            </span>
+        </li>
+        <li>
+            <strong>number.ini</strong><br/>
+            <span class="help-block">
+                Number formatting
+            </span>
+        </li>
+    </ul><br/><br/>
+    
+    <p>
+        <span class="glyphicon glyphicon glyphicon-chevron-right"></span>
+        Conventions:
+    </p>
+    <p>
+        All controllers should extend from <strong>\controller\AppController</strong> class.<br/>
+        All models should extend from <strong>\controller\AppModel</strong> class.<br/>
+        Class names should be formatted as <strong>"UpperCamelCase"</strong>.<br/>
+        Method and view file names should be formatted as <strong>"lowerCamelCase"</strong>.<br/>
+        Function names should be formatted <strong>"with_separating_underscores"</strong>.<br/>
+        All views (including templates) have <strong>".phtml"</strong> extension. Eg.: "myTemplate.phtml" or "index.phtml"
+    </p><br/><br/>
+    
+    <p>
+        <span class="glyphicon glyphicon glyphicon-chevron-right"></span>
+        Default file/folder structure:
+    </p>
+    <pre class="well">
+        flat/
+        -components/
+        -config/
+        -controller/                    <small style="color: red;">put your controllers here</small>
+        --AppController.php
+        -layout/                        <small style="color: red;">create your layouts here</small>
+        --welcome.phtml
+        -libs/                          <small style="color: red;">third party's libs (including flat core)</small>
+        --flat-core/
+        -model/                         <small style="color: red;">your application models</small>
+        --AppModel.php
+        -plugins/
+        -resources/                     <small style="color: red;">client-side related sources (css's, js's, images, sounds, etc...)</small>
+        --core/
+        --css/
+        --img/
+        --js/
+        -view/
+        -.htaccess
+        -boot.php                       <small style="color: red;">libraries, flat constants and plugins are set here</small>
+        -index.php                      <small style="color: red;">runs the application</small>
+    </pre><br/><br/>
+    
+    <p>
+        <span class="glyphicon glyphicon glyphicon-chevron-right"></span>
+        Bootstrap:
+    </p>
+    <p>
+        This project uses bootstrap by default.
+        For further information about it's author and documentations visit 
+        <a href="http://getbootstrap.com/">http://getbootstrap.com/</a>
+    </p><br/>
+    
+    <p>
+        <span class="glyphicon glyphicon glyphicon-chevron-right"></span>
+        And finally:
+    </p>
+    <blockquote>
+        <p>
+            Examples will be posted as soon as possible.<br/>
+            Thanks for your support and I hope you enjoy this little project and make great things out of it.<br/>
+            <br/>
+            Have fun!
+        </p>
+        <footer>xXNooBMaNXx</footer>
+    </blockquote>
+    
+</div>

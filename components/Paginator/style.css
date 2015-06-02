@@ -1,0 +1,35 @@
+/*Default syles for Paginator*/
+
+ul.pagination{
+    list-style: none;
+    padding: 0;
+    margin: 3px 0;
+}
+
+ul.pagination li{
+    float: left;
+}
+    
+ul.pagination .item{
+    display: block;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    color: #222;
+    padding: 3px;
+    margin: 1px;
+    background: #fff;
+}
+
+ul.pagination .item:hover,
+ul.pagination .current{
+    background-color: #222;
+    color: #fff;
+}
+
+ul.pagination .current{
+    cursor: pointer;
+}
+
+ul.pagination .current{
+    cursor: default;
+}

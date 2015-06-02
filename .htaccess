@@ -1,0 +1,17 @@
+#Disable external file indexing
+Options -indexes
+
+#Pretty URLs mode (PrettyUrlRouter)
+#Everything goes as "arguments"
+#get arguments into index.php
+#-----<[PRETYURL_MODE]>-----#
+#RewriteEngine On
+#
+##Don't redirect files
+#RewriteCond %{REQUEST_FILENAME} !-f 
+#
+##Don't redirect directories
+#RewriteCond %{REQUEST_FILENAME} !-d
+#
+#RewriteRule .* index.php?arguments=$0 [NC,QSA,L]
+#-----</[PRETYURL_MODE]>-----#

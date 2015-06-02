@@ -1,0 +1,63 @@
+<?php /* @var $this controller\DataGridPlugin */ ?>
+
+<?php
+//Generate column information
+$columnCount = count($columns);
+$cols = '';
+$ths = '';
+
+if($columnCount){
+    foreach($columns as $c){
+        $cols .= "<col style='width: {$c['width']};'/>";
+        $ths .= "<th class='text-center'>{$c['title']}</th>";
+    }
+    ?>
+    <div 
+        class="-data-grid-component"
+        data-grid-id="<?php echo $datagridId; ?>"
+        data-params="<?php echo $parameters['params']; ?>" 
+        data-check="<?php echo $parameters['token']; ?>"
+        data-url-src="<?php echo $this->getLink('fetch'); ?>"
+        data-columns="<?php echo \htmlentities(\json_encode($columns)); ?>"
+    >
+        
+        <div class="-dg-search form-inline">
+            <label>Search:</label>
+            <input class="-dg-search-input form-control" type="text" placeholder="Search"/>
+            <button class="-dg-search-button btn btn-primary">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+            <button class="-dg-clear-search-button btn btn-default" style="display: none;">
+                <span class="glyphicon glyphicon-erase"></span>
+            </button>
+        </div>
+        
+        <table class="-dg-table table table-hover table-bordered table-striped">
+            <colgroup><?php echo $cols; ?></colgroup>
+            <thead>
+                <tr><?php echo $ths; ?></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div class="form-inline text-right">
+            <div class="form-group">
+                <label>Rows per page:</label>
+                <select class="-dg-option-rpp form-control input-sm">
+                    <option selected="selected">5</option>
+                    <option>10</option>
+                    <option>30</option>
+                    <option>50</option>
+                </select>
+            </div>
+            | <label>Page:</label>
+            <div class="form-group">
+                <div class="-dg-pagination"></div>
+            </div>
+        </div>
+
+        <div class="-dg-loading-mask"></div>
+
+    </div>
+    <?php 
+}
